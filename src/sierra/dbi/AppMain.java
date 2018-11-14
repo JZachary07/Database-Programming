@@ -31,6 +31,9 @@ class AppMain {
 			DatabaseConfigurator.displayException(e);
 			System.exit(-1);
 		}
+		finally {
+			connect.close();
+		}
 		System.out.println("Operation successful.");
 		return;
 	}
